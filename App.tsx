@@ -1,12 +1,12 @@
 import React from 'react';
-import { ContadorScreen } from './src/screens/ContadorScreen';
+import {ContadorScreen} from './src/screens/ContadorScreen';
 // import {HolaMundoScreen} from './src/screens/HolaMundoScreen';
 
 const App = () => {
-  return ( 
+  return (
     // <HolaMundoScreen />;
-<ContadorScreen/>
-  ) 
+    <ContadorScreen />
+  );
 };
 
 export default App;
