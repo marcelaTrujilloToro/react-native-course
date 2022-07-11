@@ -1,11 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import { DimensionesScreen } from './src/screens/DimensionesScreen';
-import { PositionScreen } from './src/screens/PositionScreen';
-// import {BoxObjectModelScreen} from './src/screens/BoxObjectModelScreen';
-// import {ContadorScreen} from './src/screens/ContadorScreen';
-// import {HolaMundoScreen} from './src/screens/HolaMundoScreen';
+import {DimensionesScreen} from './src/screens/DimensionesScreen';
+import {FlexScreen} from './src/screens/FlexScreen';
+import {PositionScreen} from './src/screens/PositionScreen';
+import {BoxObjectModelScreen} from './src/screens/BoxObjectModelScreen';
+import {ContadorScreen} from './src/screens/ContadorScreen';
+import {HolaMundoScreen} from './src/screens/HolaMundoScreen';
+import {TareaScreen} from './src/screens/TareaScreen';
 
 const App = () => {
   return (
@@ -15,7 +17,9 @@ const App = () => {
       <ContadorScreen /> */}
       {/* <BoxObjectModelScreen /> */}
       {/* <DimensionesScreen/> */}
-      <PositionScreen/>
+      {/* <PositionScreen/> */}
+      {/* <FlexScreen/> */}
+      <TareaScreen />
     </SafeAreaView>
   );
 };
