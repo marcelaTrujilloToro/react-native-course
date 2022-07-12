@@ -1,23 +1,31 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {SafeAreaView} from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
 
-import { HolaMundo } from './src/screens/NavegacionApp/HolaMundo';
+import {NavigationContainer} from '@react-navigation/native';
+
+import {SafeAreaView} from 'react-native';
+import { StackNavigator } from './src/navigator/StackNavigator';
 
 const App = () => {
   return (
-    //SafeAreaView: verifica si puede mostrar la informacion (que no choque el componente con el nodge)
-    <SafeAreaView style={{flex: 1}}>
-      {/* <HolaMundoScreen />
-      <ContadorScreen />
-      <BoxObjectModelScreen />
-      <DimensionesScreen/>
-      <PositionScreen/>
-      <FlexScreen/>
-      <TareaScreen /> */}
 
-      <HolaMundo/>
-    </SafeAreaView>
+    //se comenta para poder seguir con el ejercicio de navegacion
+    //SafeAreaView: verifica si puede mostrar la informacion (que no choque el componente con el nodge)
+      // <SafeAreaView style={{flex: 1}}>
+      //   <HolaMundoScreen />
+      //   <ContadorScreen />
+      //   <BoxObjectModelScreen />
+      //   <DimensionesScreen />
+      //   <PositionScreen />
+      //   <FlexScreen />
+      //   <TareaScreen />
+      // </SafeAreaView>
+
+
+    <NavigationContainer>
+      <StackNavigator/>
+    </NavigationContainer>
   );
 };
 
