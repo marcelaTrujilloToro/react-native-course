@@ -12,7 +12,7 @@ export const ScreenThree = ({navigation}: ScreenProps) => {
 
   return (
     <View style={styles.globalMargin}>
-      <Text>Screen 3</Text>
+      <Text style={styles.title}>Screen 3</Text>
 
       <Button
         title="Regresar"

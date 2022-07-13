@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import {SafeAreaView} from 'react-native';
 import { StackNavigator } from './src/navigator/StackNavigator';
+import { MenuLateralBasico } from './src/navigator/MenuLateralBasico';
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
 
 
     <NavigationContainer>
-      <StackNavigator/>
+      {/* <StackNavigator/> */}
+      <MenuLateralBasico/>
     </NavigationContainer>
   );
 };
