@@ -4,7 +4,7 @@ import {Button, Text, View} from 'react-native';
 import {styles} from '../../theme/appTheme';
 import {useEffect} from 'react';
 import {RootStackParams} from '../../navigator/StackNavigator';
-import {AuthContext} from '../../context/NavigationApp/AuthContext';
+import {AuthContext} from '../../context/AuthContext';
 
 // interface RouteParams {
 //   id: number,
