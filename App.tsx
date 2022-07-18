@@ -8,7 +8,7 @@ import {SafeAreaView} from 'react-native';
 import {StackNavigator} from './src/navigator/StackNavigator';
 import {MenuLateralBasico} from './src/navigator/MenuLateralBasico';
 import {MenuLateral} from './src/navigator/MenuLateral';
-import {AuthProvider} from './src/context/AuthContext';
+import {AuthProvider} from './src/context/NavigationApp/AuthContext';
 
 const App = () => {
   return (

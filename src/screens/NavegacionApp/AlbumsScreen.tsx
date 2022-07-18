@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import {Button, Text, View} from 'react-native';
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../context/NavigationApp/AuthContext';
 import { styles } from '../../theme/appTheme';
 
 export const AlbumsScreen = () => {
