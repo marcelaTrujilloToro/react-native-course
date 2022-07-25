@@ -2,7 +2,7 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {useState} from 'react';
-import { Fab } from '../../components/Fab';
+import { Fab } from '../../components/NavigationApp/Fab';
 
 export const ContadorScreen = () => {
   const [contador, setContador] = useState(10);
