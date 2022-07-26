@@ -4,7 +4,7 @@ import {ChatScreen} from '../screens/NavegacionApp/ChatScreen';
 import {ContactsScreen} from '../screens/NavegacionApp/ContactsScreen';
 import {AlbumsScreen} from '../screens/NavegacionApp/AlbumsScreen';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {colores} from '../theme/appTheme';
+import {colores} from '../theme/NavigationApp/appTheme';
 import { Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 

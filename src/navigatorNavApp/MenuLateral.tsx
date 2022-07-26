@@ -13,7 +13,7 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
-import {styles} from '../theme/appTheme';
+import {styles} from '../theme/NavigationApp/appTheme';
 import {Tabs} from './Tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 

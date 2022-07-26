@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {Text, View} from 'react-native';
-import {colores, styles} from '../../theme/appTheme';
+import {colores, styles} from '../../theme/NavigationApp/appTheme';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import { TouchableIcon } from '../../components/NavigationApp/TouchableIcon';
 

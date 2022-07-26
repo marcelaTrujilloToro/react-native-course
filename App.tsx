@@ -1,15 +1,20 @@
+import 'react-native-gesture-handler';
 import * as React from 'react';
-import {Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import { StackNavigator } from './src/navigation/navigator';
 
 const App = () => {
   return (
-    <View>
-      <Text>Hola mundo</Text>
-    </View>
+    <NavigationContainer>
+      <StackNavigator/>
+    </NavigationContainer>
   );
 };
 
 export default App;
+
+
+// NavigationApp ---------------------------
 
 // /* eslint-disable react-native/no-inline-styles */
 // import 'react-native-gesture-handler';

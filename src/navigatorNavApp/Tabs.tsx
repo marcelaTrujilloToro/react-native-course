@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Tab1Screen} from '../screens/NavegacionApp/Tab1Screen';
 import {Tab2Screen} from '../screens/NavegacionApp/Tab2Screen';
 import {StackNavigator} from './StackNavigator';
-import {colores, styles} from '../theme/appTheme';
+import {colores, styles} from '../theme/NavigationApp/appTheme';
 import {Text} from 'react-native';
 import { TopTabNavigator } from './TopTabNavigator';
 import Icon from 'react-native-vector-icons/Ionicons';

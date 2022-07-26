@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Text, TouchableOpacity, View} from 'react-native';
-import {colores, styles} from '../../theme/appTheme';
+import {colores, styles} from '../../theme/NavigationApp/appTheme';
 import {useEffect} from 'react';
 import {StackScreenProps} from '@react-navigation/stack';
 import { DrawerScreenProps } from '@react-navigation/drawer';
