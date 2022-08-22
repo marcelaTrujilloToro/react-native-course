@@ -15,7 +15,7 @@ export const StackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{
         headerShown: false,
-        cardStyle: {backgroundColor: 'white'},
+        // cardStyle: {backgroundColor: 'white'},
     }}>
       <Stack.Screen
         name="HomeScreen"

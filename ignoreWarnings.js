@@ -10,6 +10,7 @@ if (__DEV__) {
     "exported from 'deprecated-react-native-prop-types'.",
     "Non-serializable values were found in the navigation state.",
     "VirtualizedLists should never be nested inside plain ScrollViews",
+    "ViewPropTypes will be removed from React Native. Migrate to ViewPropTypes exported from \'deprecated-react-native-prop-types\'.",
   ];
 
   const warn = console.warn;
