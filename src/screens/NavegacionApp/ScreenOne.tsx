@@ -1,8 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import {Button, Text, TouchableOpacity, View} from 'react-native';
 import {colores, styles} from '../../theme/NavigationApp/appTheme';
 import {useEffect} from 'react';
-import {StackScreenProps} from '@react-navigation/stack';
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -18,7 +18,7 @@ export const ScreenOne = ({navigation}: ScreenProps) => {
       headerLeft: () => (
         <TouchableOpacity
           style={{marginLeft: 5}}
-          onPress={() => {navigation.toggleDrawer()}}>
+          onPress={() => {navigation.toggleDrawer();}}>
           <Icon color="green" name="menu" size={35} />
         </TouchableOpacity>
       ),

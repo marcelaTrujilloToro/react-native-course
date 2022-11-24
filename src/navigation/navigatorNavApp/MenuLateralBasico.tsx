@@ -1,6 +1,6 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {SettingScreen} from '../screens/NavegacionApp/SettingScreen';
+import {SettingScreen} from '../../screens/NavegacionApp/SettingScreen';
 import {StackNavigator} from './StackNavigator';
 import {useWindowDimensions} from 'react-native';
 

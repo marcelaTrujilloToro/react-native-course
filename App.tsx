@@ -1,7 +1,22 @@
+// import React from 'react';
+// import { Text, View } from 'react-native';
+
+// const App = () => {
+//     return (
+//       <View>
+//         <Text> holasss</Text>
+//       </View>
+//     );
+// };
+
+// export default App;
+
+//PeliculasApp
+
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StackNavigator } from './src/navigation/navigator';
+import { StackNavigator } from './src/navigation/PeliculasNavigation/navigator';
 import { GradientProvider } from './src/context/PeliculasApp/GradientContext';
 
 const AppState = ({ children }: any) => {

@@ -4,8 +4,7 @@ import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
-import {SettingScreen} from '../screens/NavegacionApp/SettingScreen';
-import {StackNavigator} from './StackNavigator';
+import {SettingScreen} from '../../screens/NavegacionApp/SettingScreen';
 import {
   Image,
   Text,
@@ -13,7 +12,7 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
-import {styles} from '../theme/NavigationApp/appTheme';
+import {styles} from '../../theme/NavigationApp/appTheme';
 import {Tabs} from './Tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -58,7 +57,7 @@ const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
           style={{...styles.menuBoton, flexDirection: 'row'}}
           onPress={() => navigation.navigate('Tabs')}>
           <Text style={{marginRight: 5}}>
-            <Icon name="navigate-circle" size={30} color='blue' />
+            <Icon name="navigate-circle" size={30} color="blue" />
           </Text>
           <Text style={styles.menuItem}>Navegacion</Text>
         </TouchableOpacity>
@@ -67,7 +66,7 @@ const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
           style={{...styles.menuBoton, flexDirection: 'row'}}
           onPress={() => navigation.navigate('SettingScreen')}>
           <Text style={{marginRight: 5}}>
-            <Icon name="construct" size={30} color='red'/>
+            <Icon name="construct" size={30} color="red"/>
           </Text>
           <Text style={styles.menuItem}>Ajustes</Text>
         </TouchableOpacity>

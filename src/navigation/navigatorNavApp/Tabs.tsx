@@ -1,10 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Tab1Screen} from '../screens/NavegacionApp/Tab1Screen';
-import {Tab2Screen} from '../screens/NavegacionApp/Tab2Screen';
+import {Tab1Screen} from '../../screens/NavegacionApp/Tab1Screen';
+// import {Tab2Screen} from '../../screens/NavegacionApp/Tab2Screen';
 import {StackNavigator} from './StackNavigator';
-import {colores, styles} from '../theme/NavigationApp/appTheme';
-import {Text} from 'react-native';
+import {colores } from '../../theme/NavigationApp/appTheme';
 import { TopTabNavigator } from './TopTabNavigator';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -17,7 +16,7 @@ export const Tabs = () => {
 
       screenOptions={({route}) => ({
 
-        //estilos 
+        //estilos
         tabBarActiveTintColor: colores.primary,
         tabBarStyle: {
           borderTopColor: colores.primary,
@@ -29,6 +28,7 @@ export const Tabs = () => {
         },
 
         //funcion para cambiar iconos y colores de los mismos
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         tabBarIcon: ({color, focused, size}) => {
           let iconName: string = '';
 

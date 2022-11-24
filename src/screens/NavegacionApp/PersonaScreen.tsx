@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {StackScreenProps} from '@react-navigation/stack';
 import React, {useContext} from 'react';
-import {Button, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import {styles} from '../../theme/NavigationApp/appTheme';
 import {useEffect} from 'react';
-import {RootStackParams} from '../../navigatorNavApp/StackNavigator';
+import {RootStackParams} from '../../navigation/navigatorNavApp/StackNavigator';
 import {AuthContext} from '../../context/NavigationApp/AuthContext';
 
 // interface RouteParams {

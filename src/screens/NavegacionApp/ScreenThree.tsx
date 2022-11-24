@@ -1,5 +1,4 @@
 import React from 'react';
-import {useNavigation} from '@react-navigation/core';
 import {Button, Text, View} from 'react-native';
 import {styles} from '../../theme/NavigationApp/appTheme';
 import { StackScreenProps } from '@react-navigation/stack';
@@ -8,7 +7,7 @@ import { StackScreenProps } from '@react-navigation/stack';
 interface ScreenProps extends StackScreenProps<any, any> {}
 
 export const ScreenThree = ({navigation}: ScreenProps) => {
- 
+
 
   return (
     <View style={styles.globalMargin}>
