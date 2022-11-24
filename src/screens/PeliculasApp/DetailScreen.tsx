@@ -9,7 +9,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import {RootStackParams} from '../../navigation/PeliculasNavigation/navigator';
+import {RootStackParams} from '../../NavigatorPeliculas/Navigator';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useMovieDetails} from '../../hooks/PeliculasHooks/useMovieDetails';
 import {MovieDetails} from '../../components/PeliculasApp/MovieDetails';

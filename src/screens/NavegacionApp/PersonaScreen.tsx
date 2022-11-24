@@ -4,7 +4,7 @@ import React, {useContext} from 'react';
 import {Text, View} from 'react-native';
 import {styles} from '../../theme/NavigationApp/appTheme';
 import {useEffect} from 'react';
-import {RootStackParams} from '../../navigation/navigatorNavApp/StackNavigator';
+import {RootStackParams} from '../../NavigatorNavApp/StackNavigator';
 import {AuthContext} from '../../context/NavigationApp/AuthContext';
 
 // interface RouteParams {

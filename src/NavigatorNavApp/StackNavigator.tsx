@@ -1,9 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {ScreenOne} from '../../screens/NavegacionApp/ScreenOne';
-import {ScreenTwo} from '../../screens/NavegacionApp/ScreenTwo';
-import {ScreenThree} from '../../screens/NavegacionApp/ScreenThree';
-import {PersonaScreen} from '../../screens/NavegacionApp/PersonaScreen';
+import {ScreenOne} from '../screens/NavegacionApp/ScreenOne';
+import {ScreenTwo} from '../screens/NavegacionApp/ScreenTwo';
+import {ScreenThree} from '../screens/NavegacionApp/ScreenThree';
+import {PersonaScreen} from '../screens/NavegacionApp/PersonaScreen';
 
 export type RootStackParams = {
   ScreenOne: undefined

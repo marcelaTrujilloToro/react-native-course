@@ -1,17 +1,14 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import { HomeScreen } from '../../screens/PeliculasApp/HomeScreen';
-import { DetailScreen } from '../../screens/PeliculasApp/DetailScreen';
-import { Movie } from '../../interfaces/PeliculasInterfaces/IMovie';
+import { HomeScreen } from '../screens/ComponentesRNApp/HomeScreen';
 
 export type RootStackParams = {
   HomeScreen: undefined
-  DetailScreen: Movie
 };
 
 const Stack = createStackNavigator<RootStackParams>();
 
-export const StackNavigator = () => {
+export const Navigator = () => {
   return (
     <Stack.Navigator screenOptions={{
         headerShown: false,
@@ -22,11 +19,7 @@ export const StackNavigator = () => {
         options={{title: 'Pagina 1'}}
         component={HomeScreen}
       />
-      <Stack.Screen
-        name="DetailScreen"
-        options={{title: 'Pagina 2'}}
-        component={DetailScreen}
-      />
+
     </Stack.Navigator>
   );
 };

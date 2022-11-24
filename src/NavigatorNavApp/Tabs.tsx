@@ -1,9 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Tab1Screen} from '../../screens/NavegacionApp/Tab1Screen';
+import {Tab1Screen} from '../screens/NavegacionApp/Tab1Screen';
 // import {Tab2Screen} from '../../screens/NavegacionApp/Tab2Screen';
 import {StackNavigator} from './StackNavigator';
-import {colores } from '../../theme/NavigationApp/appTheme';
+import {colores } from '../theme/NavigationApp/appTheme';
 import { TopTabNavigator } from './TopTabNavigator';
 import Icon from 'react-native-vector-icons/Ionicons';
 
