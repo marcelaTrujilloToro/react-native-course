@@ -1,12 +1,25 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { StackNavigator } from './src/navigation/navigator';
+import { GradientProvider } from './src/context/PeliculasApp/GradientContext';
+// import { FadeScreen } from './src/screens/PeliculasApp/FadeScreen';
+
+const AppState = ({ children }: any) => {
+  return (
+    <GradientProvider>
+      {children}
+    </GradientProvider>
+  );
+};
 
 const App = () => {
   return (
     <NavigationContainer>
-      <StackNavigator/>
+      <AppState>
+        <StackNavigator />
+        {/* <FadeScreen/> */}
+      </AppState>
     </NavigationContainer>
   );
 };
