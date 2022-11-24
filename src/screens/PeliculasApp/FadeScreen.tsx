@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { Animated, Button, View } from 'react-native';
-import { useFade } from '../../hooks/useFade';
+import { useFade } from '../../hooks/PeliculasHooks/useFade';
 
 export const FadeScreen = () => {
 

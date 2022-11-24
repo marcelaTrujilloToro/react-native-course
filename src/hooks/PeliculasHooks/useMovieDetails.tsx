@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
-import movieDB from '../Api/movieDB';
-import {Cast, CreditsResponse} from '../interfaces/ICredits';
-import {MovieFull} from '../interfaces/IMovie';
+import movieDB from '../../Api/movieDB';
+import {Cast, CreditsResponse} from '../../interfaces/PeliculasInterfaces/ICredits';
+import {MovieFull} from '../../interfaces/PeliculasInterfaces/IMovie';
 
 interface MovieDetails {
   isLoading: boolean;

@@ -4,7 +4,7 @@ import { Animated, StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { GradientContext } from '../../context/PeliculasApp/GradientContext';
 import { useEffect } from 'react';
-import { useFade } from '../../hooks/useFade';
+import { useFade } from '../../hooks/PeliculasHooks/useFade';
 
 interface IGradientBackgroundProps {
     children: JSX.Element | JSX.Element[]

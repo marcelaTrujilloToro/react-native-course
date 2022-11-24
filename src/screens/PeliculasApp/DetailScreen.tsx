@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import {RootStackParams} from '../../navigation/navigator';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {useMovieDetails} from '../../hooks/useMovieDetails';
+import {useMovieDetails} from '../../hooks/PeliculasHooks/useMovieDetails';
 import {MovieDetails} from '../../components/PeliculasApp/MovieDetails';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 

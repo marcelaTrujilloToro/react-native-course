@@ -1,9 +1,8 @@
 import React from 'react';
 import {FlatList, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {Cast} from '../../interfaces/ICredits';
-import {MovieFull} from '../../interfaces/IMovie';
-import {styles} from '../../theme/NavigationApp/appTheme';
+import {Cast} from '../../interfaces/PeliculasInterfaces/ICredits';
+import {MovieFull} from '../../interfaces/PeliculasInterfaces/IMovie';
 import currencyFormatter from 'currency-formatter';
 import {CastItem} from './CastItem';
 
@@ -46,7 +45,7 @@ export const MovieDetails = ({movieFull, cast}: MovieDetailsProps) => {
           }}>
           Actores
         </Text>
-        <FlatList 
+        <FlatList
         style={{marginTop: 10, height: 70}}
           data={cast}
           keyExtractor={(item) => item.id.toString()}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {Cast} from '../../interfaces/ICredits';
+import {Cast} from '../../interfaces/PeliculasInterfaces/ICredits';
 
 interface CastItemProps {
   actor: Cast;
@@ -37,10 +37,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.9,
     shadowRadius: 9.11,
     marginHorizontal: 20,
-    paddingRight: 15
+    paddingRight: 15,
   },
   actorInfo: {
     marginLeft: 10,
-    marginTop: 5
+    marginTop: 5,
   },
 });

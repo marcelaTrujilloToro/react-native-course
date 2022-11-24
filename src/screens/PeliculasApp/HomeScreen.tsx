@@ -7,12 +7,12 @@ import {
   View,
 } from 'react-native';
 import { Poster } from '../../components/PeliculasApp/Poster';
-import { useMovies } from '../../hooks/useMovies';
+import { useMovies } from '../../hooks/PeliculasHooks/useMovies';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Carousel from 'react-native-snap-carousel';
 import { HorizontalSlider } from '../../components/PeliculasApp/HorizontalSlider';
 import { GradientBackground } from '../../components/PeliculasApp/GradientBackground';
-import { getImageColors } from '../../helpers/getColors';
+import { getImageColors } from '../../helpers/PeliculasHelpers/getColors';
 import { GradientContext } from '../../context/PeliculasApp/GradientContext';
 import { useEffect } from 'react';
 

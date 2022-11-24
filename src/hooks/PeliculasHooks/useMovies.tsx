@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
-import movieDB from '../Api/movieDB';
-import {Movie, MovieDBResponse} from '../interfaces/IMovie';
+import movieDB from '../../Api/movieDB';
+import {Movie, MovieDBResponse} from '../../interfaces/IMovie';
 
 interface IPeliculasState {
   nowPlaying: Movie[];
