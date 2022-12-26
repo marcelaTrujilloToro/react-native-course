@@ -5,19 +5,12 @@ import { styles } from '../../theme/ComponentsRNApp/appTheme';
 import { FlatListMenuItem } from '../../components/ComponentsRNApp/FlatListMenuItem';
 import { menuItems } from '../../data/ComponentsRN/menuItems';
 import { HeaderTitle } from '../../components/ComponentsRNApp/HeaderTitle';
+import { ItemSeparator } from '../../components/ComponentsRNApp/ItemSeparator';
 
 
 export const HomeScreen = () => {
 
-  const itemSeparator = () => {
-    return (
-      <View style={{
-        borderBottomWidth: 5,
-        opacity: 0.2,
-        marginVertical: 8,
-      }} />
-    );
-  };
+
 
   return (
     <View style={{ flex: 1, ...styles.globalMargin }}>
@@ -26,7 +19,7 @@ export const HomeScreen = () => {
         ListHeaderComponent={<HeaderTitle title="Opciones de menú"/>}
         renderItem={({ item }) => <FlatListMenuItem menuItem={item}/>}
         keyExtractor={(item) => item.name}
-        ItemSeparatorComponent={itemSeparator}
+        ItemSeparatorComponent={()=> <ItemSeparator/>}
       />
     </View>
   );

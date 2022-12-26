@@ -26,4 +26,14 @@ export const menuItems: IMenuItem[] = [
       icon: 'document-text-outline',
       component: 'InputScreen',
     },
+    {
+      name: 'Pull to refresh',
+      icon: 'refresh-outline',
+      component: 'PullToRefreshScreen',
+    },
+    {
+      name: 'Section list',
+      icon: 'list-outline',
+      component: 'CustomSectionListScreen',
+    },
   ];

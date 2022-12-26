@@ -6,6 +6,8 @@ import { Animation102Screen } from '../screens/ComponentesRNApp/Animation102Scre
 import { SwitchScreen } from '../screens/ComponentesRNApp/SwitchScreen';
 import { AlertScreen } from '../screens/ComponentesRNApp/AlertScreen';
 import { InputScreen } from '../screens/ComponentesRNApp/InputScreen';
+import { PullToRefreshScreen } from '../screens/ComponentesRNApp/PullToRefreshScreen';
+import { CustomSectionListScreen } from '../screens/ComponentesRNApp/CustomSectionListScreen';
 
 
 
@@ -40,6 +42,14 @@ export const Navigator = () => {
       <Stack.Screen
         name="InputScreen"
         component={InputScreen}
+      />
+      <Stack.Screen
+        name="PullToRefreshScreen"
+        component={PullToRefreshScreen}
+      />
+      <Stack.Screen
+        name="CustomSectionListScreen"
+        component={CustomSectionListScreen}
       />
 
     </Stack.Navigator>
