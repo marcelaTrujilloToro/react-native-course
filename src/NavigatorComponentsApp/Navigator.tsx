@@ -4,6 +4,8 @@ import { HomeScreen } from '../screens/ComponentesRNApp/HomeScreen';
 import { Animation101Screen } from '../screens/ComponentesRNApp/Animation101Screen';
 import { Animation102Screen } from '../screens/ComponentesRNApp/Animation102Screen';
 import { SwitchScreen } from '../screens/ComponentesRNApp/SwitchScreen';
+import { AlertScreen } from '../screens/ComponentesRNApp/AlertScreen';
+import { InputScreen } from '../screens/ComponentesRNApp/InputScreen';
 
 
 
@@ -30,6 +32,14 @@ export const Navigator = () => {
       <Stack.Screen
         name="SwitchScreen"
         component={SwitchScreen}
+      />
+      <Stack.Screen
+        name="AlertScreen"
+        component={AlertScreen}
+      />
+      <Stack.Screen
+        name="InputScreen"
+        component={InputScreen}
       />
 
     </Stack.Navigator>
