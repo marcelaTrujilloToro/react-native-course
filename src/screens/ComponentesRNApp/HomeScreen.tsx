@@ -1,36 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { styles } from '../../theme/ComponentsRNApp/appTheme';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { FlatListMenuItem } from '../../components/ComponentsRNApp/FlatListMenuItem';
-import { IMenuItem } from '../../interfaces/ComponentsRNApp/appInterfaces';
+import { menuItems } from '../../data/ComponentsRN/menuItems';
+import { HeaderTitle } from '../../components/ComponentsRNApp/HeaderTitle';
 
-
-const menuItems: IMenuItem[] = [
-  {
-    name: 'Animation 101',
-    icon: 'cube-outline',
-    component: 'Animation101Screen',
-  },
-  {
-    name: 'Animation 102',
-    icon: 'albums-outline',
-    component: 'Animation102Screen',
-  },
-];
 
 export const HomeScreen = () => {
-
-  const { top } = useSafeAreaInsets();
-
-  const renderListHeader = () => {
-    return (
-      <View style={{ marginTop: top + 20, marginBottom: 20 }}>
-        <Text style={styles.title}>Opciones de Menú</Text>
-      </View>
-    );
-  };
 
   const itemSeparator = () => {
     return (
@@ -46,7 +23,7 @@ export const HomeScreen = () => {
     <View style={{ flex: 1, ...styles.globalMargin }}>
       <FlatList
         data={menuItems}
-        ListHeaderComponent={renderListHeader}
+        ListHeaderComponent={<HeaderTitle title="Opciones de menú"/>}
         renderItem={({ item }) => <FlatListMenuItem menuItem={item}/>}
         keyExtractor={(item) => item.name}
         ItemSeparatorComponent={itemSeparator}
