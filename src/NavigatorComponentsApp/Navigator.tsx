@@ -9,6 +9,7 @@ import { InputScreen } from '../screens/ComponentesRNApp/InputScreen';
 import { PullToRefreshScreen } from '../screens/ComponentesRNApp/PullToRefreshScreen';
 import { CustomSectionListScreen } from '../screens/ComponentesRNApp/CustomSectionListScreen';
 import { ModalScreen } from '../screens/ComponentesRNApp/ModalScreen';
+import { InfiniteScrollScreen } from '../screens/ComponentesRNApp/InfiniteScrollScreen';
 
 
 
@@ -56,6 +57,11 @@ export const Navigator = () => {
         name="ModalScreen"
         component={ModalScreen}
       />
+      <Stack.Screen
+        name="InfiniteScrollScreen"
+        component={InfiniteScrollScreen}
+      />
+
 
     </Stack.Navigator>
   );

@@ -23,7 +23,7 @@ export const FlatListMenuItem = ({ menuItem }: IFlatListMenuItemProps) => {
           color="#5856d6"
           size={25}
         />
-        <Text style={styles.itemText}>{menuItem.name} - {menuItem.icon}</Text>
+        <Text style={styles.itemText}>{menuItem.name}</Text>
         <View style={{ flex: 1 }} />
         <Icon
           name="chevron-forward-outline"

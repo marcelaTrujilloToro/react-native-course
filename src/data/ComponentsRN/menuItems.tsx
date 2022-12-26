@@ -41,4 +41,9 @@ export const menuItems: IMenuItem[] = [
       icon: 'copy-outline',
       component: 'ModalScreen',
     },
+    {
+      name: 'Infinite Scroll',
+      icon: 'download-outline',
+      component: 'InfiniteScrollScreen',
+    },
   ];
