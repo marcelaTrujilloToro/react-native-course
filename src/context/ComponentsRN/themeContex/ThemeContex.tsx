@@ -1,6 +1,7 @@
 
-import React, { createContext, useReducer } from 'react';
-import { themeReducer, ThemeState, lightTheme } from './themeReducer';
+import React, { createContext, useEffect, useReducer } from 'react';
+import { useColorScheme } from 'react-native';
+import { themeReducer, ThemeState, lightTheme, darkTheme } from './themeReducer';
 
 
 interface ThemeContexProps {
@@ -14,18 +15,24 @@ export const ThemeContext = createContext({} as ThemeContexProps);
 
 export const ThemeProvider = ({ children }: any) => {
 
-    const [theme, dispatch] = useReducer(themeReducer, lightTheme);
+    //solo IOS leer el tema del dispisitivo
+    const colorScheme = useColorScheme();
+
+    const [theme, dispatch] = useReducer(themeReducer, (colorScheme === 'dark') ? darkTheme : lightTheme);
+
+    //solo IOS  esta escuchando el cambio del tema en el dispositivo para hacer el cambio
+    useEffect(() => {
+        (colorScheme === 'light')
+            ? setLightTheme()
+            : setDarkTheme();
+    }, [colorScheme]);
 
 
     const setDarkTheme = () => {
         dispatch({ type: 'set_dark_theme' });
-        console.log('dark');
-
     };
     const setLightTheme = () => {
         dispatch({ type: 'set_light_theme' });
-        console.log('light');
-
     };
 
     return (
