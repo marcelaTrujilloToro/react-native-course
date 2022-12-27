@@ -1,48 +1,59 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { useState } from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, FlatList, View } from 'react-native';
+import { FadeInImage } from '../../components/ComponentsRNApp/FadeInImage';
 import { HeaderTitle } from '../../components/ComponentsRNApp/HeaderTitle';
 
 export const InfiniteScrollScreen = () => {
 
 
-    const [numbers, setNumbers] = useState([1, 2, 3, 4, 5]);
+  const [numbers, setNumbers] = useState([1, 2, 3, 4, 5]);
 
-    const renderItem = (item: number) => {
-        return (
-            <Text style={styles.textItem}>{item}</Text>
-        );
-    };
-
-    const loadMore = () => {
-        const newArray: number[] = [];
-        for (let i = 0; i < 5; i++) {
-            newArray[i] = numbers.length + i;
-        }
-
-        setNumbers([...numbers, ...newArray]);
-    };
-
+  const renderItem = (item: number) => {
     return (
-        <View style={{ flex: 1, backgroundColor: 'red' }}>
-            <FlatList
-                data={numbers}
-                keyExtractor={(item) => item.toString()}
-                renderItem={({ item }) => renderItem(item)}
-
-                ListHeaderComponent={<HeaderTitle title="Infinite scroll" />}
-
-                onEndReached={ loadMore}
-                onEndReachedThreshold={0.5}
-            />
-
-        </View>
+      <FadeInImage
+        uri={`https://picsum.photos/id/${item}/500/400`}
+        style={{
+          width: '100%',
+          height: 400,
+        }}
+      />
     );
-};
+  };
 
-const styles = StyleSheet.create({
-    textItem: {
-        backgroundColor: 'green',
-        height: 150,
-    },
-});
+  const loadMore = () => {
+    const newArray: number[] = [];
+    for (let i = 0; i < 5; i++) {
+      newArray[i] = numbers.length + i;
+    }
+
+    setTimeout(() => {
+      setNumbers([...numbers, ...newArray]);
+    }, 1500);
+  };
+
+  return (
+    <View style={{ flex: 1 }}>
+      <FlatList
+        data={numbers}
+        keyExtractor={(item) => item.toString()}
+        renderItem={({ item }) => renderItem(item)}
+
+        ListHeaderComponent={() => (
+          <View style={{ marginHorizontal: 20 }}>
+            <HeaderTitle title="Infinite scroll" />
+          </View>
+        )}
+        ListFooterComponent={() => (
+          <View style={{ height: 150, width: '100%', justifyContent: 'center', alignItems: 'center' }}>
+            <ActivityIndicator size={30} color="#5856d6" />
+          </View>
+        )}
+
+        onEndReached={loadMore}
+        onEndReachedThreshold={0.5}
+      />
+
+    </View>
+  );
+};
