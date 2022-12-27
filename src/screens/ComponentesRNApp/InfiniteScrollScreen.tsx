@@ -1,11 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ActivityIndicator, FlatList, View } from 'react-native';
 import { FadeInImage } from '../../components/ComponentsRNApp/FadeInImage';
 import { HeaderTitle } from '../../components/ComponentsRNApp/HeaderTitle';
+import { ThemeContext } from '../../context/ComponentsRN/themeContex/ThemeContex';
 
 export const InfiniteScrollScreen = () => {
 
+
+  const { theme: { colors } } = useContext(ThemeContext);
 
   const [numbers, setNumbers] = useState([1, 2, 3, 4, 5]);
 
@@ -46,7 +49,7 @@ export const InfiniteScrollScreen = () => {
         )}
         ListFooterComponent={() => (
           <View style={{ height: 150, width: '100%', justifyContent: 'center', alignItems: 'center' }}>
-            <ActivityIndicator size={30} color="#5856d6" />
+            <ActivityIndicator size={30} color={colors.primary} />
           </View>
         )}
 

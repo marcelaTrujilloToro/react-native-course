@@ -1,14 +1,18 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, { useContext } from 'react';
 import { SectionList, Text, View } from 'react-native';
 import { HeaderTitle } from '../../components/ComponentsRNApp/HeaderTitle';
 import { ItemSeparator } from '../../components/ComponentsRNApp/ItemSeparator';
+import { ThemeContext } from '../../context/ComponentsRN/themeContex/ThemeContex';
 import { casas } from '../../data/ComponentsRN/sectionList';
 import { styles } from '../../theme/ComponentsRNApp/appTheme';
 
 
 
 export const CustomSectionListScreen = () => {
+
+  const { theme: { colors } } = useContext(ThemeContext);
+
     return (
         <View style={{ ...styles.globalMargin, flex: 1 }}>
 
@@ -24,10 +28,10 @@ export const CustomSectionListScreen = () => {
                 )}
 
                 stickySectionHeadersEnabled={true}
-                renderItem={({ item }) => <Text>{item}</Text>}
+                renderItem={({ item }) => <Text style={{color: colors.text}}>{item}</Text>}
 
                 renderSectionHeader={({ section }) => (
-                    <View style={{ backgroundColor: 'white' }}>
+                    <View style={{ backgroundColor: colors.background }}>
                        <HeaderTitle title={section.casa}/>
                     </View>
                 )}

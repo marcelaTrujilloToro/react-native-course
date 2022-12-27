@@ -1,11 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { RefreshControl, ScrollView, Text, View } from 'react-native';
 import { HeaderTitle } from '../../components/ComponentsRNApp/HeaderTitle';
 import { styles } from '../../theme/ComponentsRNApp/appTheme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { ThemeContext } from '../../context/ComponentsRN/themeContex/ThemeContex';
 
 export const PullToRefreshScreen = () => {
+
+  const { theme: { colors } } = useContext(ThemeContext);
+
 
     const { top } = useSafeAreaInsets();
 
@@ -29,9 +33,9 @@ export const PullToRefreshScreen = () => {
                 <RefreshControl
                     refreshing={refreshing}
                     onRefresh={onRefresh}
-                    tintColor="#5856d6"
+                    tintColor= {colors.primary}
                     title="Refreshing..."
-                    titleColor="#5856d6"
+                    titleColor= {colors.primary}
                 />
             }
         >

@@ -1,13 +1,17 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ScrollView, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { CustomSwitch } from '../../components/ComponentsRNApp/CustomSwitch';
 import { HeaderTitle } from '../../components/ComponentsRNApp/HeaderTitle';
 import { styles } from '../../theme/ComponentsRNApp/appTheme';
 import { useForm } from '../../hooks/ComponentsRN/useForm';
+import { ThemeContext } from '../../context/ComponentsRN/themeContex/ThemeContex';
 
 export const InputScreen = () => {
+
+  const { theme: { colors, dividerColor } } = useContext(ThemeContext);
+
 
   const { formulario, onChange, isSubscribe } = useForm({
     name: '',
@@ -29,15 +33,17 @@ export const InputScreen = () => {
             <HeaderTitle title="Text inputs" />
 
             <TextInput
-              style={stylesScreen.input}
+              style={{ ...stylesScreen.input, borderColor: colors.border, color: colors.text }}
               placeholder="Ingrese su nombre"
+              placeholderTextColor={dividerColor}
               autoCorrect={false}
               autoCapitalize="words"
               onChangeText={(value) => onChange(value, 'name')}
             />
             <TextInput
-              style={stylesScreen.input}
+              style={{ ...stylesScreen.input, borderColor: colors.border, color: colors.text }}
               placeholder="Ingrese su email"
+              placeholderTextColor={dividerColor}
               autoCorrect={false}
               autoCapitalize="none"
               onChangeText={(value) => onChange(value, 'email')}
@@ -47,15 +53,16 @@ export const InputScreen = () => {
 
 
             <TextInput
-              style={stylesScreen.input}
+              style={{ ...stylesScreen.input, borderColor: colors.border, color: colors.text }}
               placeholder="Ingrese su telefono"
+              placeholderTextColor={dividerColor}
               onChangeText={(value) => onChange(value, 'phone')}
               keyboardType="phone-pad"
             />
             <View style={stylesScreen.switchRow}>
 
 
-              <Text style={stylesScreen.switchText}>Subscribirse: </Text>
+              <Text style={{ ...stylesScreen.switchText, color: colors.text }}>Subscribirse: </Text>
               <CustomSwitch
                 isOn={isSubscribe}
                 onChange={(value) => {
@@ -79,7 +86,6 @@ const stylesScreen = StyleSheet.create({
     height: 50,
     paddingHorizontal: 10,
     borderRadius: 10,
-    borderColor: 'rgba(0,0,0,0.3)',
     marginVertical: 6,
   },
   switchText: {
@@ -91,5 +97,5 @@ const stylesScreen = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginVertical: 7,
-},
+  },
 });

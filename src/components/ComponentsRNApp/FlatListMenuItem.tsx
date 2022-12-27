@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -26,7 +27,7 @@ export const FlatListMenuItem = ({ menuItem }: IFlatListMenuItemProps) => {
           color={colors.primary}
           size={25}
         />
-        <Text style={styles.itemText}>{menuItem.name}</Text>
+        <Text style={{...styles.itemText, color: colors.text}}>{menuItem.name}</Text>
         <View style={{ flex: 1 }} />
         <Icon
           name="chevron-forward-outline"

@@ -1,10 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { CustomSwitch } from '../../components/ComponentsRNApp/CustomSwitch';
 import { HeaderTitle } from '../../components/ComponentsRNApp/HeaderTitle';
+import { ThemeContext } from '../../context/ComponentsRN/themeContex/ThemeContex';
 
 export const SwitchScreen = () => {
+
+    const { theme: {colors} } = useContext(ThemeContext);
 
     const [state, setState] = useState({
         isActive: true,
@@ -28,7 +31,7 @@ export const SwitchScreen = () => {
             <HeaderTitle title="Switches" />
 
             <View style={styles.switchRow}>
-                <Text style={styles.switchText}>Is active</Text>
+                <Text style={{...styles.switchText, color: colors.text}}>Is active</Text>
                 <CustomSwitch
                     isOn={isActive}
                     onChange={(value) => {
@@ -37,7 +40,7 @@ export const SwitchScreen = () => {
                 />
             </View>
             <View style={styles.switchRow}>
-                <Text style={styles.switchText}>Is hungry</Text>
+                <Text style={{...styles.switchText, color: colors.text}}>Is hungry</Text>
                 <CustomSwitch
                     isOn={isHungry}
                     onChange={(value) => {
@@ -46,7 +49,7 @@ export const SwitchScreen = () => {
                 />
             </View>
             <View style={styles.switchRow}>
-                <Text style={styles.switchText}>Is happy</Text>
+                <Text style={{...styles.switchText, color: colors.text}}>Is happy</Text>
                 <CustomSwitch
                     isOn={isHappy}
                     onChange={(value) => {
@@ -55,7 +58,7 @@ export const SwitchScreen = () => {
                 />
             </View>
 
-            <Text style={styles.switchText}>
+            <Text style={{...styles.switchText, color: colors.text}}>
                 {JSON.stringify(state, null, 5)}
             </Text>
 
